@@ -1,0 +1,102 @@
+:root {
+    --cor-fundo: #0d1117;
+    --texto-principal: #c9d1d9;
+    --texto-secundario: #8b949e;
+    --destaque: #30c1c1;
+    --destaque-borda: #30363d;
+    --fundo-cartao: #161b22;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* cabeçalho */
+header {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--destaque-borda);
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--destaque);
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.cargo {
+    color: var(--destaque);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.descricao-perfil {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--texto-secundario);
+}
+
+.links-sociais {
+    margin-top: 1.5rem;
+}
+
+.links-sociais a {
+    color: var(--texto-principal);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.links-sociais a:hover {
+    color: var(--destaque);
+}
+
+/* section */
+section {
+    margin-top: 3rem;
+}
+
+h2 {
+    border-left: 4px solid var(--destaque);
+    padding-left: 1rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+/* tags */
+.conteiner-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tag-habilidade {
+    background-color: #21262d;
+    color: var(--destaque);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--destaque-borda);
+    font-weight: 500;
+}
