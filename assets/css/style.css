@@ -30,8 +30,8 @@ header {
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 3px solid var(--destaque);
     margin-bottom: 16px;
@@ -39,7 +39,7 @@ header {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 8px 0;
     color: #fff;
 }
@@ -88,7 +88,7 @@ h2 {
 .conteiner-habilidades {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 .tag-habilidade {
@@ -132,4 +132,147 @@ h2 {
     font-family: monospace;
     display: block;
     margin-bottom: 8px;
+}
+
+/* dropdown (titulo e data) */
+.cabecalho-dropdown {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+/* hover pra indicar que é clicável */
+.cabecalho-dropdown:hover h3 {
+    color: var(--destaque);
+}
+
+/* seta dropdown */
+.seta {
+    transition: transform 0.3s ease;
+    color: var(--texto-secundario);
+}
+
+.item-linha-tempo.ativo .seta {
+    transform: rotate(180deg);
+    color: var(--destaque);
+}
+
+/* conteúdo experiencia (escondida por padrão) */
+.conteudo-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+/* conteúdo (quando aberta) */
+.item-linha-tempo.ativo .conteudo-dropdown {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 16px;
+}
+
+.item-linha-tempo {
+    transition: all 0.3s;
+}
+
+/* carressel de projetos */
+
+.carrossel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carrossel {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+    scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.cartao-projeto {
+    min-width: 300px;
+    max-width: 300px;
+    background-color: var(--fundo-cartao);
+    border: 1px solid var(--destaque-borda);
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+    flex: 0 0 auto;
+}
+
+.btn-nav {
+    background-color: transparent;
+    border: 1px solid var(--destaque-borda);
+    color: var(--destaque);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-nav:hover {
+    background-color: var(--destaque);
+    color: var(--cor-fundo);
+    border-color: var(--destaque);
+}
+
+/* ocultar botões no celulr */
+@media (max-width: 768px) {
+    .btn-nav {
+        display: none;
+    }
+}
+
+.link-projeto {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-5px);
+    border-color: var(--destaque);
+}
+
+.cartao-projeto h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.cartao-projeto:hover h3 {
+    color: var(--destaque);
+}
+
+.stack-projeto {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.icone-link {
+    font-size: 14px;
+    margin-left: 8px;
+    opacity: 0.7;
 }
